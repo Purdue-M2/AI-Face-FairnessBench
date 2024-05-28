@@ -17,6 +17,12 @@ conda activate FairnessBench
 pip install -r requirements.txt
 ```
 ## 2. Dataset Preparation
-After getting our AI-Face dataset, put train.csv and test.csv under  [`./dataset`](./dataset)
+After getting our AI-Face dataset, put train.csv and test.csv under  [`./dataset`](./dataset).
+
+## 3. Load Pretrained Weights
+Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
+
+## 4. Train
+To run the training code, you should first go to the [`./training/`](./training/) folder, then run [`train_test.py`](training/train_test.py)
 
 If you use the AI-face dataset in your research, please cite our paper as:
