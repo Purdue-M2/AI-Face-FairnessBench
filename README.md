@@ -23,6 +23,24 @@ After getting our AI-Face dataset, put train.csv and test.csv under  [`./dataset
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
 
 ## 4. Train
-To run the training code, you should first go to the [`./training/`](./training/) folder, then run [`train_test.py`](training/train_test.py)
+To run the training code, you should first go to the [`./training/`](./training/) folder, then run [`train_test.py`](training/train_test.py):
+
+```
+cd training
+
+python train.py 
+```
+
+You can adjust the parameters in [`train_test.py`](training/train_test.py) to specify the parameters, *e.g.,* training dataset, batchsize, learnig rate, *etc*.
+
+`--lr`: learning rate, default is 0.0005. 
+
+`--train_batchsize`: batchsize for training, default is 128.
+
+`--test_batchsize`: batchsize for testing, default is 32.
+
+` --datapath`: /path/to/[`./dataset`](./dataset).
+
+`--model`: detector name, default is 'xception'.
 
 If you use the AI-face dataset in your research, please cite our paper as:
