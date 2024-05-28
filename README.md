@@ -19,6 +19,9 @@ pip install -r requirements.txt
 ## 2. Dataset Preparation
 After getting our AI-Face dataset, put train.csv and test.csv under  [`./dataset`](./dataset).
 
+train.csv and test.csv is formatted:
+|- Image Path,Reliability Score Gender,Reliability Score Age,Reliability Score Race,Ground Truth Gender,Ground Truth Age,Ground Truth Race,Intersection,Target
+
 ## 3. Load Pretrained Weights
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
 
