@@ -20,6 +20,7 @@ pip install -r requirements.txt
 After getting our AI-Face dataset, put train.csv and test.csv under  [`./dataset`](./dataset).
 
 train.csv and test.csv is formatted:
+
 |- Image Path,Reliability Score Gender,Reliability Score Age,Reliability Score Race,Ground Truth Gender,Ground Truth Age,Ground Truth Race,Intersection,Target
 
 ## 3. Load Pretrained Weights
