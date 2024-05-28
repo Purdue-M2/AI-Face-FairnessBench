@@ -39,8 +39,21 @@ You can adjust the parameters in [`train_test.py`](training/train_test.py) to sp
 
 `--test_batchsize`: batchsize for testing, default is 32.
 
-` --datapath`: /path/to/[`./dataset`](./dataset).
+` --datapath`: /path/to/[`dataset`](./dataset).
 
-`--model`: detector name, default is 'xception'.
+`--model`: detector name ['xception', 'efficientnet', 'core', 'ucf', 'srm', 'f3net', 'spsl', 'daw_fdd', 'dag_fdd', 'fair_df_detector'], default is 'xception'.
+
+`--dataset_type`: dataset type loaded for detectors, default is 'no_pair'. For 'ucf' and 'fair_df_detector', it should be 'pair'. 
+
+#### 📝 Note
+To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_test_vit.py) and [`train_test_clip.py`](training/train_test_clip.py), respectively.
+
+## 📦 Provided Detectors
+|                  | File name                               | Paper                                                                                                                                                                                                                                                                                                                                                         |
+|------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Xception          | [xception.py](./training/networks/xception.py)         | [Xception: Deep learning with depthwise separable convolutions](https://openaccess.thecvf.com/content_cvpr_2017/html/Chollet_Xception_Deep_Learning_CVPR_2017_paper.html) |
+| EfficientNet-B4            | [resnet50.py](training/networks/resnet50.py)       | [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)                                                                                                                                                                                                                                                                                              |
+| EfficientNet-B3      | [efficientnetb3.py](./training/networks/efficientnetb3.py) | [Efficientnet: Rethinking model scaling for convolutional neural networks](http://proceedings.mlr.press/v97/tan19a.html)                                                                                                                                                                                                                  |
+| EfficientNet-B4      | [efficientnetb4.py](./training/networks/efficientnetb4.py) | [Efficientnet: Rethinking model scaling for convolutional neural networks](http://proceedings.mlr.press/v97/tan19a.html) 
 
 If you use the AI-face dataset in your research, please cite our paper as:
