@@ -17,7 +17,7 @@ conda activate FairnessBench
 pip install -r requirements.txt
 ```
 ## 2. Dataset Preparation and Description
-After getting our AI-Face dataset, put the provided `train.csv' and `test.csv' within AI-Face dataset under  [`./dataset`](./dataset).
+After getting our AI-Face dataset, put the provided `train.csv` and `test.csv` within AI-Face dataset under  [`./dataset`](./dataset).
 
 train.csv and test.csv is formatted:
 
