@@ -2,7 +2,7 @@
 This repository is the official implementation of our paper "AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark"
 
 <figure>
-  <img src="assets/dataset_overview" alt="Dataset Overview">
+  <img src="assets/dataset_overview.png" alt="Dataset Overview">
   <figcaption>AI-Face Overview.</figcaption>
 </figure>
 
