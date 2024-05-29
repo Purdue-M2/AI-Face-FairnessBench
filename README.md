@@ -23,6 +23,12 @@ train.csv and test.csv is formatted:
 
 |- Image Path,Uncertainty Score Gender,Uncertainty Score Age,Uncertainty Score Race,Ground Truth Gender,Ground Truth Age,Ground Truth Race,Intersection,Target
 
+-Ground Truth Gender: 1-Male, 0-Female.
+
+-Ground Truth Age: 0-Young, 1-Middle-aged, 2-Senior, 3-Ohters.
+
+-Ground Truth Race: 0-Asian, 1-White, 2-Black, 3-Others.
+
 ## 3. Load Pretrained Weights
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
 
