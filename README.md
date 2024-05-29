@@ -29,6 +29,10 @@ train.csv and test.csv is formatted:
 
 -Ground Truth Race: 0-Asian, 1-White, 2-Black, 3-Others.
 
+-Intersection: 0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)
+
+-Target: 0-Real, 1-Fake.
+
 ## 3. Load Pretrained Weights
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
 
