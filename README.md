@@ -1,5 +1,11 @@
 # AI-Face-FairnessBench
 This repository is the official implementation of our paper "AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark"
+
+<figure>
+  <img src="assets/dataset_overview" alt="Dataset Overview">
+  <figcaption>AI-Face Overview.</figcaption>
+</figure>
+
 ## License
 The AI-Face Dataset is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
 ## Download
