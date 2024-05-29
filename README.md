@@ -3,7 +3,6 @@ This repository is the official implementation of our paper "AI-Face: A Million-
 
 <figure>
   <img src="assets/dataset_overview.png" alt="Dataset Overview">
-  <figcaption>AI-Face Overview.</figcaption>
 </figure>
 
 ## License
