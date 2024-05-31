@@ -14,44 +14,7 @@ from PIL import Image
 import random
 
 
-# class pairDataset(Dataset):
-#     def __init__(self, csv_fake_file, csv_real_file, owntransforms):
 
-#         # Get real and fake image lists
-       
-#         self.fake_image_list = pd.read_csv(csv_fake_file)
-#         self.real_image_list = pd.read_csv(csv_real_file)
-#         self.transform = owntransforms
-
-
-#     def __getitem__(self, idx):
-#         if torch.is_tensor(idx):
-#             idx = idx.tolist()
-
-#         fake_img_path = self.fake_image_list.iloc[idx, 0]
-#         real_idx = random.randint(0, len(self.real_image_list) - 1)
-#         real_img_path = self.real_image_list.iloc[real_idx, 0]
-
-#         if fake_img_path != 'Image Path':
-#             fake_img = Image.open(fake_img_path)
-#             fake_trans = self.transform(fake_img)
-#             fake_label = np.array(self.fake_image_list.iloc[idx, 11])
-
-          
-#             fake_spe_label = np.array(self.fake_image_list.iloc[idx, 12])
-#             fake_intersec_label = np.array(self.fake_image_list.iloc[idx, 10])
-          
-#         if real_img_path != 'Image Path':
-#             real_img = Image.open(real_img_path)
-#             real_trans = self.transform(real_img)
-#             real_label = np.array(self.real_image_list.iloc[real_idx, 11])
-#             real_spe_label = np.array(self.real_image_list.iloc[real_idx, 11])
-#             real_intersec_label = np.array(
-#                 self.real_image_list.iloc[real_idx, 10])
-           
-
-#         return {"fake": (fake_trans, fake_label, fake_spe_label, fake_intersec_label),
-#                 "real": (real_trans, real_label, real_spe_label, real_intersec_label)}
 class pairDataset(Dataset):
     def __init__(self, csv_fake_file, csv_real_file, owntransforms):
 
