@@ -38,6 +38,10 @@ train.csv and test.csv is formatted:
 
 -Target: 0-Real, 1-Fake.
 
+#### 📝 Note 
+
+Our AI-Face dataset contains face images from four deepfake video datasets: [FF++](https://github.com/ondyari/FaceForensics), [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics), [DFD](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html) and [DFDC](https://ai.facebook.com/datasets/dfdc/). You can access these datasets with demongraphic annotaions from [paper](https://arxiv.org/pdf/2208.05845.pdf) through the link provided in our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) repository. Please be aware that we re-annotated demographic attributes for those four deepfake video datasets in our AI-Face dataset, and the demographic annotations are provided with uncertain score formatted in a CSV file as described above. The annotations you can acquire through our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) are different with those provided in our AI-Face dataset, and they are not accompained with uncertianty scores.
+
 ## 3. Load Pretrained Weights
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
 
