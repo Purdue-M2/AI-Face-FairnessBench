@@ -26,21 +26,42 @@ After getting our AI-Face dataset, put the provided `train.csv` and `test.csv` w
 
 train.csv and test.csv is formatted:
 
-|- Image Path,Uncertainty Score Gender,Uncertainty Score Age,Uncertainty Score Race,Ground Truth Gender,Ground Truth Age,Ground Truth Race,Intersection,Target
+| Column                     | Description                                                         |
+|----------------------------|---------------------------------------------------------------------|
+| Image Path                 | Path to the image file                                              |
+| Uncertainty Score Gender   | Uncertainty score for gender annotation                             |
+| Uncertainty Score Age      | Uncertainty score for age annotation                                |
+| Uncertainty Score Race     | Uncertainty score for race annotation                               |
+| Ground Truth Gender        | Gender label: 1 - Male, 0 - Female                                  |
+| Ground Truth Age           | Age label: 0 - Young, 1 - Middle-aged, 2 - Senior, 3 - Others       |
+| Ground Truth Race          | Race label: 0 - Asian, 1 - White, 2 - Black, 3 - Others             |
+| Intersection               |  0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)|
+| Target                     | Label indicating real (0) or fake (1) image                         |
 
--Ground Truth Gender: 1-Male, 0-Female.
-
--Ground Truth Age: 0-Young, 1-Middle-aged, 2-Senior, 3-Ohters.
-
--Ground Truth Race: 0-Asian, 1-White, 2-Black, 3-Others.
-
--Intersection: 0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)
-
--Target: 0-Real, 1-Fake.
 
 #### 📝 Note 
 
-Our AI-Face dataset contains face images from four deepfake video datasets: [FF++](https://github.com/ondyari/FaceForensics), [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics), [DFD](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html) and [DFDC](https://ai.facebook.com/datasets/dfdc/). You can access these datasets with demongraphic annotaions from [paper](https://arxiv.org/pdf/2208.05845.pdf) through the link provided in our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) repository. Please be aware that we re-annotated demographic attributes for those four deepfake video datasets in our AI-Face dataset, and the demographic annotations are provided with uncertain score formatted in a CSV file as described above. The annotations you can acquire through our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) are different with those provided in our AI-Face dataset, and they are not accompained with uncertianty scores.
+Our AI-Face dataset contains face images from four deepfake video datasets: [FF++](https://github.com/ondyari/FaceForensics), [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics), [DFD](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html) and [DFDC](https://ai.facebook.com/datasets/dfdc/). You can access these datasets with demongraphic annotaions from [paper](https://arxiv.org/pdf/2208.05845.pdf) through the link provided in our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) repository. Please be aware that we re-annotated demographic attributes for those four deepfake video datasets in our AI-Face dataset, and the demographic annotations are provided with uncertain score formatted in a CSV file as described above. The annotations you can acquire through our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) are different with those provided in our AI-Face dataset, and they are __not__ accompained with uncertianty scores.
+
+After you get the download link for the AI-Face dataset, you will see `part1.tar` and `part2.tar`. Please download both parts if you are going to use the entire dataset. They are uploaded in two parts because One Drive only allows files not larger than 250GB.
+
+### Requirements
+Ensure your device has **300GB** of available space for this dataset.
+
+### Instructions
+
+1. Download `part1.tar` and `part2.tar`.
+2. Untar both files.
+3. Organize the data as shown below:
+   
+```
+AI-Face Dataset
+  ├── AttGAN
+  ├── Latent_Diffusion
+  ├── Palette
+  ├── ...
+  ├── ...
+```
 
 ## 3. Load Pretrained Weights
 Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
