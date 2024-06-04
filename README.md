@@ -110,3 +110,10 @@ To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_t
 
 
 If you use the AI-face dataset in your research, please cite our paper as:
+
+@article{lin2024aiface,
+  title={AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark},
+  author={Li Lin and Santosh and Xin Wang and Shu Hu},
+  journal={arXiv preprint arXiv:2406.00783},
+  year={2024}
+}
