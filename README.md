@@ -1,5 +1,5 @@
 # AI-Face-FairnessBench
-This repository is the official implementation of our paper "AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark"
+This repository is the official implementation of our paper [AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark](https://arxiv.org/abs/2406.00783)
 
 <figure>
   <img src="assets/dataset_overview.png" alt="Dataset Overview">
