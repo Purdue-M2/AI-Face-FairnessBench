@@ -131,7 +131,7 @@ class FairDetector(AbstractDetector):
         con_loss_func = con_loss_class(margin=3.0)
         rec_loss_func = rec_loss_class()
         fair_loss_func = fair_loss_class(
-            cls_num_list=[2475, 25443, 1468, 4163, 8013, 31281, 1111, 2185])
+            cls_num_list=[37276, 718535, 58543, 64593, 67552, 674406, 35115, 33384])
         fuse_loss_func = fuse_loss_class()
         loss_func = {
             'cls_ag': cls_loss_func,
