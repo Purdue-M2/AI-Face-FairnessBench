@@ -43,6 +43,7 @@ parser.add_argument("--model", type=str, default='vit')
 
 parser.add_argument("--dataset_type", type=str, default='no_pair',
                     help="detector name[pair,no_pair]")
+parser.add_argument("--post_processing", default=False)
 
 #################################test##############################
 
@@ -172,7 +173,10 @@ def train(model, criterion, optimizer, scheduler, num_epochs, start_epoch):
 
 
             for eachatt in interattributes:
-                test_dataset = ImageDataset_Test(args.test_datapath, eachatt, test_transforms)
+                if args.post_processing:
+                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, test_transforms, args.post_processing)
+                else:
+                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, data_transforms['test'], args.post_processing)
 
                 test_dataloader = DataLoader(
                     test_dataset, batch_size=args.test_batchsize, shuffle=False,num_workers=16, pin_memory=True)
