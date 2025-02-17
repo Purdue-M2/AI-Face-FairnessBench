@@ -170,9 +170,9 @@ def train(model,  optimizer, scheduler, num_epochs, start_epoch):
 
             for eachatt in interattributes:
                 if args.post_processing:
-                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, test_transforms)
+                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, test_transforms, args.post_processing)
                 else:
-                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, data_transforms['test'])
+                  test_dataset = ImageDataset_Test(args.test_datapath, eachatt, data_transforms['test'], args.post_processing)
 
                 test_dataloader = DataLoader(
                     test_dataset, batch_size=args.test_batchsize, shuffle=False,num_workers=32, pin_memory=True)
