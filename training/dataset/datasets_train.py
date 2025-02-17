@@ -70,10 +70,11 @@ class ImageDataset_Test_Ind(Dataset):
 
 
 class ImageDataset_Test(Dataset):
-    def __init__(self, csv_file, attribute, owntransforms):
+    def __init__(self, csv_file, attribute, owntransforms, post_processing):
         self.transform = owntransforms
         self.img = []
         self.label = []
+        self.post_processing = post_processing
         
         # Mapping from attribute strings to (intersec_label, age_label) tuples
         # Note: if an attribute doesn't correspond to an age label, we use None
@@ -107,10 +108,15 @@ class ImageDataset_Test(Dataset):
       
     def __getitem__(self, index):
         path = self.img[index]
-        img = np.array(Image.open(path))
-        label = self.label[index]
-        augmented = self.transform(image=img)
-        img = augmented['image'] 
+        if self.post_processing:
+           img = np.array(Image.open(path))
+           label = self.label[index]
+           augmented = self.transform(image=img)
+           img = augmented['image']
+        else: 
+           img = Image.open(path)
+           img = self.transform(img)
+           label = self.label[index]
 
         data_dict = {
             'image': img,
