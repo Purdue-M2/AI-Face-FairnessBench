@@ -1,12 +1,28 @@
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-2.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-2.4.1-brightgreen) ![Python](https://img.shields.io/badge/Python-3.9.13-brightgreen)
+
 # AI-Face-FairnessBench
 This repository is the official implementation of our paper [AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark](https://arxiv.org/abs/2406.00783)
 
+🎉🎉🎉 **Our AI-Face has been accepted by CVPR 2025!**
 <figure>
   <img src="assets/dataset_overview.png" alt="Dataset Overview">
 </figure>
 
+Welcome to our work **AI-Face**, for fairness benchmark in AI-generated face detection. 
+
+**In this work, we propose: (1) a **million-scale demographically annotated** with 37 distinct generations methods; and (2) a **comprehensive fairness benchmark** for training, evaluation, and analysis.**
+
+**AI-Face Dataset Highlight:** The key features of our proposed **AI-Face dataset** are as follows
+
+✅ **Demographic Annotation**: *AI-Face* provides Skin Tone, Gender, Age annotations, which are highly salient to measuring bias.
+
+✅ **Forgery Diversity**: *AI-Face* comprises **37** distinct deepfake techniques from Deepfake Vidoes, GAN, and Diffusion Models (both representive and SOTA methods are included), facilitating the detection of nowadays' SOTA deepfakes and AIGCs.
+
+✅ **Forgery Scale**: *AI-Face* offers **million-level** AI-generated data scale for face image.
+
 ## License
 The AI-Face Dataset is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+
 ## Download
 If you would like to access the AI-Face Dataset, please download and sign the [EULA](https://drive.google.com/file/d/1uiAuNHvYmn1kggVCaDmFbndESlGyMN-X/view?usp=sharing). Please upload the signed EULA to the [Google Form](https://forms.gle/Wci1hsZCz6Rgnvw57) and fill the required details. Once the form is approved, the download link will be sent to you.
 If you have any questions, please send an email to lin1785@purdue.edu, hu968@purdue.edu
@@ -29,13 +45,10 @@ train.csv and test.csv is formatted:
 | Column                     | Description                                                         |
 |----------------------------|---------------------------------------------------------------------|
 | Image Path                 | Path to the image file                                              |
-| Uncertainty Score Gender   | Uncertainty score for gender annotation                             |
-| Uncertainty Score Age      | Uncertainty score for age annotation                                |
-| Uncertainty Score Race     | Uncertainty score for race annotation                               |
-| Ground Truth Gender        | Gender label: 1 - Male, 0 - Female                                  |
-| Ground Truth Age           | Age label: 0 - Young, 1 - Middle-aged, 2 - Senior, 3 - Others       |
-| Ground Truth Race          | Race label: 0 - Asian, 1 - White, 2 - Black, 3 - Others             |
-| Intersection               |  0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)|
+| Gender                     | Gender label: 1 - Male, 0 - Female                                  |
+| Age                        | Age label: 0 - Child, 1 - Youth, 3 - Adult, 4 - Middle-aged, 5-Senior|
+| Skin Tone                  | Skin Tone label: Monk Skin Tone Scale             |
+| Intersection               | 0-(Male,Light), 1-(Male,Medium), 2-(Male,Dark), 3-(Female,Light), 4-(Female,Medium), 5-(Female,Dark)|
 | Target                     | Label indicating real (0) or fake (1) image                         |
 
 
@@ -107,6 +120,22 @@ To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_t
 | DAW-FDD    |  [daw_fdd.py](./training/detectors/daw_fdd.py) | [Improving Fairness in Deepfake Detection](https://openaccess.thecvf.com/content/WACV2024/papers/Ju_Improving_Fairness_in_Deepfake_Detection_WACV_2024_paper.pdf) | 
 | DAG-FDD    |  [dag_fdd.py](./training/detectors/dag_fdd.py) | [Improving Fairness in Deepfake Detection](https://openaccess.thecvf.com/content/WACV2024/papers/Ju_Improving_Fairness_in_Deepfake_Detection_WACV_2024_paper.pdf) | 
 | PG-FDD    |  [fair_df_detector.py](./training/detectors/fair_df_detector.py) | [Preserving Fairness Generalization in Deepfake Detection](https://arxiv.org/abs/2402.17229) | 
+
+## 📢 Update Notes:
+This is our second version of the dataset; here, we list the differences between the first version. 
+1. Annotation Difference. We have Gender, Age, and Race categories in the first version. See the [updated annotations](#2-dataset-preparation-and-description) in the second version.
+   
+| Column                     | Description                                                         |
+|----------------------------|---------------------------------------------------------------------|
+| Image Path                 | Path to the image file                                              |
+| Uncertainty Score Gender   | Uncertainty score for gender annotation                             |
+| Uncertainty Score Age      | Uncertainty score for age annotation                                |
+| Uncertainty Score Race     | Uncertainty score for race annotation                               |
+| Ground Truth Gender        | Gender label: 1 - Male, 0 - Female                                  |
+| Ground Truth Age           | Age label: 0 - Young, 1 - Middle-aged, 2 - Senior, 3 - Others       |
+| Ground Truth Race          | Race label: 0 - Asian, 1 - White, 2 - Black, 3 - Others             |
+| Intersection               |  0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)|
+| Target                     | Label indicating real (0) or fake (1) image                         |
 
 
 If you use the AI-face dataset in your research, please cite our paper as:
