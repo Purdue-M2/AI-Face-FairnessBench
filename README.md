@@ -122,7 +122,7 @@ To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_t
 | PG-FDD    |  [fair_df_detector.py](./training/detectors/fair_df_detector.py) | [Preserving Fairness Generalization in Deepfake Detection](https://arxiv.org/abs/2402.17229) | 
 
 ## 📢 Update Notes:
-This is our second version of the dataset; here, we list the differences between the first version. 
+This is our second version of the dataset; here, we list the key differences between the first version. 
 1. Annotation Difference. We have Gender, Age, and Race categories in the first version. See the [updated annotations](#2-dataset-preparation-and-description) in the second version.
    
 | Column                     | Description                                                         |
@@ -136,6 +136,21 @@ This is our second version of the dataset; here, we list the differences between
 | Ground Truth Race          | Race label: 0 - Asian, 1 - White, 2 - Black, 3 - Others             |
 | Intersection               |  0-(Male,Asian), 1-(Male,White), 2-(Male,Black), 3-(Male,Others), 4-(Female,Asian), 5-(Female,White), 6-(Female,Black), 7-(Female,Others)|
 | Target                     | Label indicating real (0) or fake (1) image                         |
+
+2. We used [VGGFace2](https://www.robots.ox.ac.uk/~vgg/data/vgg_face2/) for annotator training in the first version, while [IMDB-WIKI](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/), the gender and age labels from IMDB-WIKI were crawled from Wikipedia and IMDb website, which makes sure the label quality is higher and more reliable.
+
+3. The difference in the subsets of different version of AI-Face includes:
+   
+| **Category**                  | **AI-Face v1** | **AI-Face v2** |
+|--------------------------------|---------------|---------------|
+| **Deepfake Video Datasets**    | FF++, DFDC, DFC, Celeb-DF-v2 | FF++, DFDC, DFD, Celeb-DF-v2 |
+| **GAN Models (10 total)**      | AttGAN, MMDGAN, StarGAN, StyleGANs, MSGGAN, ProGAN, STGAN, VQGAN | AttGAN, MMDGAN, StarGAN, StyleGANs, MSGGAN, ProGAN, STGAN, VQGAN |
+| **DM Models (8 total)**        | DALLE2, IF, Midjourney, DCFace, Latent Diffusion, Palette, Stable Diffusion v1.5, Stable Diffusion Inpainting | DALLE2, IF, Midjourney, DCFace, Latent Diffusion, Palette, Stable Diffusion v1.5, Stable Diffusion Inpainting |
+| **Fake Face Images**           | 1,245,660 | 1,245,660 |
+| **Real Source Datasets**       | **FFHQ, CASIA-WebFace, IMDB-WIKI, CelebA, real images from FF++, DFDC, DFD, Celeb-DF-v2** | **FFHQ, IMDB-WIKI, real images from FF++, DFDC, DFD, Celeb-DF-v2** |
+| **Total Real Face Images**     | **866,096** | **400,885** |
+| **Total Subsets**              | **30** | **28** |
+| **Generation Methods**         | 5 in FF++, 5 in DFD, 8 in DFDC, 1 in A-Celeb-DF-v2, 10 GANs, 8 DMs | 5 in FF++, 5 in DFD, 8 in DFDC, 1 in Celeb-DF-v2, 10 GANs, 8 DMs |
 
 
 If you use the AI-face dataset in your research, please cite our paper as:
