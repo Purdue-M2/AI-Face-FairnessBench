@@ -149,10 +149,10 @@ This is our second version of the dataset; here, we list the key differences bet
 If you use the AI-face dataset in your research, please cite our paper as:
 
 ```bash
-@article{lin2024aiface,
+@article{lin2025aiface,
   title={AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark},
   author={Li Lin and Santosh and Xin Wang and Shu Hu},
   journal={arXiv preprint arXiv:2406.00783},
-  year={2024}
+  year={2025}
 }
 ```
