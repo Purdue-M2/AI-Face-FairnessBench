@@ -105,7 +105,7 @@ You can adjust the parameters in [`train_test.py`](training/train_test.py) to sp
 #### 📝 Note
 To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_test_vit.py) and [`train_test_clip.py`](training/train_test_clip.py), respectively.
 
-## 📦 [`Provided Detectors`](./training/detectors)
+## 📦 Provided Detectors
 |                  | File name                               | Paper                                                                                                                                                                                                                                                                                                                                                         |
 |------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Xception          | [xception_detector.py](./training/detectors/xception_detector.py)         | [Xception: Deep learning with depthwise separable convolutions](https://openaccess.thecvf.com/content_cvpr_2017/html/Chollet_Xception_Deep_Learning_CVPR_2017_paper.html) |
