@@ -51,16 +51,6 @@ train.csv and test.csv is formatted:
 | Intersection               | 0-(Male,Light), 1-(Male,Medium), 2-(Male,Dark), 3-(Female,Light), 4-(Female,Medium), 5-(Female,Dark)|
 | Target                     | Label indicating real (0) or fake (1) image                         |
 
-
-#### 📝 Note 
-
-Our AI-Face dataset contains face images from four deepfake video datasets: [FF++](https://github.com/ondyari/FaceForensics), [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics), [DFD](https://ai.googleblog.com/2019/09/contributing-data-to-deepfake-detection.html) and [DFDC](https://ai.facebook.com/datasets/dfdc/). You can access these datasets with demongraphic annotaions from [paper](https://arxiv.org/pdf/2208.05845.pdf) through the link provided in our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) repository. Please be aware that we __re-annotated demographic attributes for those four deepfake video datasets in our AI-Face dataset__, and the demographic annotations are provided with uncertainty score formatted in a CSV file as described above. The annotations you can acquire through our [Fairness-Generalization](https://github.com/Purdue-M2/Fairness-Generalization) are different with those provided in our AI-Face dataset, and they are __not__ accompained with uncertianty scores.
-
-After you get the download link for the AI-Face dataset, you will see `part1.tar` and `part2.tar`. Please download both parts if you are going to use the entire dataset. They are uploaded in two parts because One Drive only allows files not larger than 250GB.
-
-### Requirements
-Ensure your device has **300GB** of available space for this dataset.
-
 ### Instructions
 
 1. Download `part1.tar` and `part2.tar`.
