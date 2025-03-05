@@ -151,7 +151,7 @@ If you use the AI-face dataset in your research, please cite our paper as:
 ```bash
 @inproceedings{lin2025aiface,
   title={AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark},
-  author={Li Lin and Santosh and Xin Wang, Mingyang Wu, and Shu Hu},
+  author={Li Lin and Santosh and Mingyang Wu and Xin Wang and Shu Hu},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2025}
 }
