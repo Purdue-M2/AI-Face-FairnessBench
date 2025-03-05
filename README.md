@@ -158,9 +158,11 @@ If you use the AI-face dataset in your research, please cite our paper as:
 ```
 ## Acknowledgement
 We acknowledge that part of our code is adapted from  [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) (NeruIPS 2023), if you cite our paper, please consider citing their paper as well:
+```bash
 @article{yan2023deepfakebench,
   title={Deepfakebench: A comprehensive benchmark of deepfake detection},
   author={Yan, Zhiyuan and Zhang, Yong and Yuan, Xinhang and Lyu, Siwei and Wu, Baoyuan},
   journal={arXiv preprint arXiv:2307.01426},
   year={2023}
 }
+```
