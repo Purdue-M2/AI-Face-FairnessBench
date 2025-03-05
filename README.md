@@ -67,7 +67,7 @@ AI-Face Dataset
 ```
 
 ## 3. Load Pretrained Weights
-Before running the training code, make sure you load the pre-trained weights. We provide pre-trained weights under [`./training/pretrained`](./training/pretrained). You can also download *Xception* model trained on ImageNet (through this [link](http://data.lip6.fr/cadene/pretrainedmodels/xception-b5690688.pth)) or use your own pretrained *Xception*.
+Before running the training code, make sure you load the pre-trained weights. You can download *Xception* model trained on ImageNet (through this [link](https://purdue0-my.sharepoint.com/:f:/g/personal/lin1785_purdue_edu/Ev9aYYYBI5dGoKq_ib2FnbYBWM9un-dpLBX9UwfedInMSQ?e=A2nqXO)).
 
 ## 4. Train
 To run the training code, you should first go to the [`./training/`](./training/) folder, then run [`train_test.py`](training/train_test.py):
@@ -132,7 +132,7 @@ This is our second version of the dataset; here, we list the key differences bet
 
 2. We used [VGGFace2](https://www.robots.ox.ac.uk/~vgg/data/vgg_face2/) for annotator training in the first version, while [IMDB-WIKI](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/), the gender and age labels from IMDB-WIKI were crawled from Wikipedia and IMDb website, which makes sure the label quality is higher and more reliable.
 
-3. The difference in the subsets of different version of AI-Face includes:
+3. The difference in the subsets of different versions of AI-Face includes:
    
 | **Category**                  | **AI-Face v1** | **AI-Face v2** |
 |--------------------------------|---------------|---------------|
