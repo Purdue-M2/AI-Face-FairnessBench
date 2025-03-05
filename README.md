@@ -114,7 +114,7 @@ To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_t
 ## 🚀 Checkpoints
 Checkpoints of detectors trained on our AI-Face can be downloaded through the [link](https://purdue0-my.sharepoint.com/:f:/g/personal/lin1785_purdue_edu/EsNU0g9QQP5Dgf74rgmydfoB-gWRy2zRpqnuE8sONgQ5mw?e=1wvy2j).
 
-## 📢 Update Notes:
+## 📢 Update Notes
 This is our second version of the dataset; here, we list the key differences between the first version. For more details on the initial version, refer to our [paper](https://arxiv.org/pdf/2406.00783v2).
 1. Annotation Difference. We have Gender, Age, and Race categories in the first version. See the [updated annotations](#2-dataset-preparation-and-description) in the second version.
    
@@ -156,3 +156,11 @@ If you use the AI-face dataset in your research, please cite our paper as:
   year={2025}
 }
 ```
+## Acknowledgement
+We acknowledge that part of our code is adapted from  [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) (NeruIPS 2023), if you cite our paper, please consider citing their paper as well:
+@article{yan2023deepfakebench,
+  title={Deepfakebench: A comprehensive benchmark of deepfake detection},
+  author={Yan, Zhiyuan and Zhang, Yong and Yuan, Xinhang and Lyu, Siwei and Wu, Baoyuan},
+  journal={arXiv preprint arXiv:2307.01426},
+  year={2023}
+}
