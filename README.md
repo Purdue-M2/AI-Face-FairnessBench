@@ -121,6 +121,9 @@ To train ViT-b/16 and UnivFD, please run  [`train_test_vit.py`](training/train_t
 | DAG-FDD    |  [dag_fdd.py](./training/detectors/dag_fdd.py) | [Improving Fairness in Deepfake Detection](https://openaccess.thecvf.com/content/WACV2024/papers/Ju_Improving_Fairness_in_Deepfake_Detection_WACV_2024_paper.pdf) | 
 | PG-FDD    |  [fair_df_detector.py](./training/detectors/fair_df_detector.py) | [Preserving Fairness Generalization in Deepfake Detection](https://arxiv.org/abs/2402.17229) | 
 
+## 🚀 Checkpoints
+Checkpoints of detectors trained on our AI-Face can be downloaded through the [link](https://purdue0-my.sharepoint.com/:f:/g/personal/lin1785_purdue_edu/EsNU0g9QQP5Dgf74rgmydfoB-gWRy2zRpqnuE8sONgQ5mw?e=1wvy2j).
+
 ## 📢 Update Notes:
 This is our second version of the dataset; here, we list the key differences between the first version. 
 1. Annotation Difference. We have Gender, Age, and Race categories in the first version. See the [updated annotations](#2-dataset-preparation-and-description) in the second version.
