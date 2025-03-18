@@ -26,9 +26,10 @@ The AI-Face Dataset is licensed under [CC BY-NC-ND 4.0](https://creativecommons.
 ## Download
 You can access and download the images of AI-Face dataset [here](https://purdue0-my.sharepoint.com/:f:/g/personal/lin1785_purdue_edu/EoFNIgrp3A5JiIbP5fv9BqABUnbp_BnHKbvpR1xGUTaM7g?e=u5cmIy).
 
-If you would like to access the **demographic annotations** of AI-Face Dataset, please download and sign the [EULA](https://drive.google.com/file/d/1uiAuNHvYmn1kggVCaDmFbndESlGyMN-X/view?usp=sharing). Please upload the signed EULA to the [Google Form](https://forms.gle/Wci1hsZCz6Rgnvw57) and fill the required details. Once the form is approved, the annotations download link will be sent to you.
+If you would like to access the **demographic annotations** of AI-Face Dataset, please download and sign the [EULA](https://drive.google.com/file/d/1uiAuNHvYmn1kggVCaDmFbndESlGyMN-X/view?usp=sharing). Please upload the signed EULA to the [Google Form](https://forms.gle/Wci1hsZCz6Rgnvw57) and fill the required details. Once the form is approved, the annotations download link will be sent to you. 
 If you have any questions, please send an email to lin1785@purdue.edu, hu968@purdue.edu
 
+**Note**: We can only provide the annotations for the Celeb-DF dataset, but not the images. You can download the images using the [link](https://github.com/yuezunli/celeb-deepfakeforensics). 
 ## 1. Installation
 
 You can run the following script to configure the necessary environment:
