@@ -10,7 +10,7 @@ This repository is the official implementation of our paper [AI-Face: A Million-
 We’re thrilled to announce the Competition of Fairness in AI Face Detection, held at the 2nd Workshop on New Trends in AI-Generated Media and Security (AIMS) @ NeurIPS 2025
 
 
-🔗Competition Website: https://lnkd.in/dVZ4ZEWZ
+🔗Competition Website: https://sites.google.com/view/aifacedetection/home
 
 <figure>
   <img src="assets/dataset_overview.png" alt="Dataset Overview">
