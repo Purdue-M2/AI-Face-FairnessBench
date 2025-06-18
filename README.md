@@ -4,6 +4,14 @@
 This repository is the official implementation of our paper [AI-Face: A Million-Scale Demographically Annotated AI-Generated Face Dataset and Fairness Benchmark](https://arxiv.org/abs/2406.00783)
 
 🎉🎉🎉 **Our AI-Face has been accepted by CVPR 2025!**
+
+🚨**Call for Participation: NeurIPS 2025 Competition on Fairness in AI Face Detection!**
+
+We’re thrilled to announce the Competition of Fairness in AI Face Detection, held at the 2nd Workshop on New Trends in AI-Generated Media and Security (AIMS) @ NeurIPS 2025
+
+
+🔗Competition Website: https://lnkd.in/dVZ4ZEWZ
+
 <figure>
   <img src="assets/dataset_overview.png" alt="Dataset Overview">
 </figure>
