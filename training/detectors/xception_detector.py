@@ -40,7 +40,7 @@ class XceptionDetector(AbstractDetector):
         backbone = backbone_class({'mode': 'original',
                                    'num_classes': 1, 'inc': 3, 'dropout': False})
         # if donot load the pretrained weights, fail to get good results
-        state_dict = torch.load('./pretrained/xception-b5690688.pth')
+        state_dict = torch.load('./pretrained/xception-b5690688.pth', weights_only=True)
         for name, weights in state_dict.items():
             if 'pointwise' in name:
                 state_dict[name] = weights.unsqueeze(-1).unsqueeze(-1)
